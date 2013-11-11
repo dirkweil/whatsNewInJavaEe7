@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="home::#index" NAME="output" PATH="/index"
+    TARGET="rules:#index" TITLE="home" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="flowB1-return::#index" NAME="output1"
+    PATH="/index" TARGET="rules:#index" TITLE="flowB1-return" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="flowB2-return::#index" NAME="output2"
+    PATH="/index" TARGET="rules:#index" TITLE="flowB2-return" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="flowC-return::#index" NAME="output3"
+    PATH="/index" TARGET="rules:#index" TITLE="flowC-return" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#index" PATH="/index" SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>
