@@ -25,6 +25,10 @@
       </h:panelGroup>
 
     </ui:define>
+
+    <ui:define name="footer">
+      <h:outputText value="#{facesContext.viewRoot.viewId}" style="float: right;" />
+    </ui:define>
   </ui:composition>
 </h:body>
 </html>
