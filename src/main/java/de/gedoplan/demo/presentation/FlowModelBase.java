@@ -1,4 +1,4 @@
-package de.gedoplan.demo.model;
+package de.gedoplan.demo.presentation;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

@@ -1,4 +1,4 @@
-package de.gedoplan.demo.model;
+package de.gedoplan.demo.presentation;
 
 import javax.enterprise.inject.Produces;
 import javax.faces.flow.Flow;

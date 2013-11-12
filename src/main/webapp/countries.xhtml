@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:jsf="http://xmlns.jcp.org/jsf" >
+
+<ui:composition template="/templates/standard.xhtml">
+  <ui:param name="title" value="JPA 2.1: Converter" />
+  <ui:define name="content">
+    <h:dataTable value="#{countryModel.countries}" var="country" rules="all">
+      <h:column>
+        <f:facet name="header">ISO</f:facet>
+        <h:outputText value="#{country.isoCode}" />
+      </h:column>
+
+      <h:column>
+        <f:facet name="header">Name</f:facet>
+        <h:outputText value="#{country.name}" />
+      </h:column>
+
+      <h:column>
+        <f:facet name="header">Continent<br/>(DB value)</f:facet>
+        <h:outputText value="#{country.continent}" />
+        <br/>
+        <h:outputText value="(#{countryModel.getDbValueForContinent(country)})" />
+      </h:column>
+
+      <h:column>
+        <f:facet name="header">Phone</f:facet>
+        <h:outputText value="#{country.phonePrefix}" />
+      </h:column>
+
+      <h:column>
+        <f:facet name="header">Expired?<br/>(DB value)</f:facet>
+        <h:outputText value="#{country.expired}" />
+        <br/>
+        <h:outputText value="(#{countryModel.getDbValueForExpired(country)})" />
+      </h:column>
+    </h:dataTable>
+    
+    <h:form>
+      <h:commandButton action="#{countryModel.createSomeCounties()}" value="create some countries" rendered="#{empty countryModel.countries}" />
+    </h:form>
+  </ui:define>
+</ui:composition>
+</html>

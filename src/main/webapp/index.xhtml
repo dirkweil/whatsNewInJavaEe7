@@ -30,12 +30,31 @@
               <strong>HTML 5 friendly markup</strong>
             </dt>
             <dd>
-              <h:commandLink value="Pass-through elements and attributes" action="/html5demo" />
+              <h:commandLink value="Pass-through elements and attributes" action="/html5demo?faces-redirect=true" />
+            </dd>
+          </dl>
+        </dd>
+
+        <dt>
+          <strong>Java Persistence 2.1</strong>
+        </dt>
+        <dd>
+          <dl>
+            <dt>
+              <strong>Converter</strong>
+            </dt>
+            <dd>
+              <h:commandLink value="Converter for boolean an enum" action="/countries?faces-redirect=true" />
             </dd>
           </dl>
         </dd>
       </dl>
     </h:form>
   </ui:define>
+
+  <ui:define name="footer">
+    <h:outputText value="#{facesContext.viewRoot.viewId}" style="float: right;" />
+  </ui:define>
+
 </ui:composition>
 </html>

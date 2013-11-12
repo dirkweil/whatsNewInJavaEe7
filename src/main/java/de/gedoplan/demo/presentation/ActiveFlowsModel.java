@@ -1,4 +1,4 @@
-package de.gedoplan.demo.model;
+package de.gedoplan.demo.presentation;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;

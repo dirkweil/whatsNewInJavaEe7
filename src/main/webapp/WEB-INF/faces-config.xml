@@ -13,21 +13,25 @@
     <navigation-case>
       <from-outcome>home</from-outcome>
       <to-view-id>/index</to-view-id>
+      <redirect/>
     </navigation-case>
 
     <navigation-case>
       <from-outcome>flowB1-return</from-outcome>
       <to-view-id>/index</to-view-id>
+      <redirect/>
     </navigation-case>
 
     <navigation-case>
       <from-outcome>flowB2-return</from-outcome>
       <to-view-id>/index</to-view-id>
+      <redirect/>
     </navigation-case>
 
     <navigation-case>
       <from-outcome>flowC-return</from-outcome>
       <to-view-id>/index</to-view-id>
+      <redirect/>
     </navigation-case>
   </navigation-rule>
 </faces-config>
