@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:jsf="http://xmlns.jcp.org/jsf" >
+
+<ui:composition template="/templates/standard.xhtml">
+  <ui:define name="content">
+    <h:form prependId="false">
+      <h:panelGrid columns="2">
+        <h:outputLabel value="Email: " for="email" />
+        <input jsf:id="email" jsf:value="#{demoModel.email}" type="email" name="email" size="40" required="required"/>
+
+        <h:outputLabel value="#Nights: " for="nights" />
+        <h:inputText id="nights" value="#{demoModel.nights}"  >
+          <f:passThroughAttribute name="type" value="number" />
+          <f:passThroughAttribute name="size" value="40" />
+        </h:inputText>
+        
+        <h:commandButton value="ok" />
+      </h:panelGrid>
+    </h:form>
+  </ui:define>
+</ui:composition>
+</html>
