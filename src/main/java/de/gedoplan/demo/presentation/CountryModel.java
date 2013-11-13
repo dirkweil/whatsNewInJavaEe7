@@ -23,7 +23,7 @@ public class CountryModel
   private Map<Country, Object[]> dbValues;
 
   @PostConstruct
-  void postConstruct()
+  void initCountries()
   {
     this.dbValues = new HashMap<>();
     this.countries = this.countryRepository.findAll();
@@ -56,7 +56,7 @@ public class CountryModel
     this.countryRepository.save(new Country("US", "United States of America", "1", Continent.NORTH_AMERICA, false));
     this.countryRepository.save(new Country("YU", "Yugoslavia", null, Continent.EUROPE, true));
 
-    postConstruct();
+    initCountries();
   }
 
 }
