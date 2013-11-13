@@ -5,9 +5,14 @@ import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = Country.TABLE_NAME)
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Country
 {
   public static final String TABLE_NAME = "JPA_COUNTRY";

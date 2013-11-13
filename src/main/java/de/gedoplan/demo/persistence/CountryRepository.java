@@ -51,4 +51,9 @@ public class CountryRepository
     return (Object[]) query.getSingleResult();
   }
 
+  public Country findById(String id)
+  {
+    return this.entityManager.find(Country.class, id);
+  }
+
 }
