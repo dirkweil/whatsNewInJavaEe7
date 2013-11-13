@@ -1,5 +1,7 @@
 package de.gedoplan.demo.persistence;
 
+import de.gedoplan.demo.interceptor.TraceCall;
+
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -12,6 +14,7 @@ import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
 @ApplicationScoped
+@TraceCall
 public class PublisherRepository
 {
   @PersistenceContext
