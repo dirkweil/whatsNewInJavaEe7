@@ -2,11 +2,9 @@ package de.gedoplan.demo.persistence;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceUnitUtil;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
@@ -15,26 +13,11 @@ import javax.transaction.Transactional;
 public class CountryRepository
 {
   @PersistenceContext
-  EntityManager       entityManager;
-
-  PersistenceUnitUtil persistenceUnitUtil;
-
-  @PostConstruct
-  void postConstruct()
-  {
-    this.persistenceUnitUtil = this.entityManager.getEntityManagerFactory().getPersistenceUnitUtil();
-  }
+  EntityManager entityManager;
 
   @Transactional
   public Country save(Country country)
   {
-
-    if (this.persistenceUnitUtil.getIdentifier(country) == null)
-    {
-      this.entityManager.persist(country);
-      return country;
-    }
-
     return this.entityManager.merge(country);
   }
 

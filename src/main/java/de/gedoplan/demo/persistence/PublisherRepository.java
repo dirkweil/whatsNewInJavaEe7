@@ -4,12 +4,10 @@ import de.gedoplan.demo.interceptor.TraceCall;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityGraph;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceUnitUtil;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
@@ -18,26 +16,11 @@ import javax.transaction.Transactional;
 public class PublisherRepository
 {
   @PersistenceContext
-  EntityManager       entityManager;
-
-  PersistenceUnitUtil persistenceUnitUtil;
-
-  @PostConstruct
-  void postConstruct()
-  {
-    this.persistenceUnitUtil = this.entityManager.getEntityManagerFactory().getPersistenceUnitUtil();
-  }
+  EntityManager entityManager;
 
   @Transactional
   public Publisher save(Publisher publisher)
   {
-
-    if (this.persistenceUnitUtil.getIdentifier(publisher) == null)
-    {
-      this.entityManager.persist(publisher);
-      return publisher;
-    }
-
     return this.entityManager.merge(publisher);
   }
 
