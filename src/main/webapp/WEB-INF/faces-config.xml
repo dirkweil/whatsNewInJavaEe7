@@ -4,7 +4,7 @@
     <resource-library-contracts>
       <contract-mapping>
         <url-pattern>*</url-pattern>
-        <contracts>jday</contracts>
+        <contracts>jughh</contracts>
       </contract-mapping>
     </resource-library-contracts>
   </application>
@@ -13,25 +13,21 @@
     <navigation-case>
       <from-outcome>home</from-outcome>
       <to-view-id>/index</to-view-id>
-      <redirect/>
     </navigation-case>
 
     <navigation-case>
       <from-outcome>flowB1-return</from-outcome>
       <to-view-id>/index</to-view-id>
-      <redirect/>
     </navigation-case>
 
     <navigation-case>
       <from-outcome>flowB2-return</from-outcome>
       <to-view-id>/index</to-view-id>
-      <redirect/>
     </navigation-case>
 
     <navigation-case>
       <from-outcome>flowC-return</from-outcome>
       <to-view-id>/index</to-view-id>
-      <redirect/>
     </navigation-case>
   </navigation-rule>
 </faces-config>

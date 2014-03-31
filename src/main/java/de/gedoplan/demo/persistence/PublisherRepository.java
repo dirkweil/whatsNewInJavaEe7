@@ -31,7 +31,7 @@ public class PublisherRepository
 
   public List<Publisher> findAll(String fetchgraphName)
   {
-    TypedQuery<Publisher> query = this.entityManager.createQuery("select x from Publisher x", Publisher.class);
+    TypedQuery<Publisher> query = this.entityManager.createQuery("select distinct x from Publisher x", Publisher.class);
     if (fetchgraphName != null)
     {
       EntityGraph<?> entityGraph = this.entityManager.getEntityGraph(fetchgraphName);
