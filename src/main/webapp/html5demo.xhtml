@@ -8,10 +8,10 @@
     <h:form prependId="false">
       <h:panelGrid columns="2">
         <h:outputLabel value="Email: " for="email" />
-        <input jsf:id="email" jsf:value="#{demoModel.email}" type="email" name="email" size="40" required="required"/>
+        <input jsf:id="email" jsf:value="#{demoPresenter.email}" type="email" name="email" size="40" required="required"/>
 
         <h:outputLabel value="#Nights: " for="nights" />
-        <h:inputText id="nights" value="#{demoModel.nights}"  >
+        <h:inputText id="nights" value="#{demoPresenter.nights}"  >
           <f:passThroughAttribute name="type" value="number" />
           <f:passThroughAttribute name="size" value="40" />
         </h:inputText>

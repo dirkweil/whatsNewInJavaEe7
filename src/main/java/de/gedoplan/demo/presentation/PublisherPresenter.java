@@ -10,7 +10,7 @@ import javax.enterprise.inject.Model;
 import javax.inject.Inject;
 
 @Model
-public class PublisherModel
+public class PublisherPresenter
 {
   @Inject
   PublisherRepository     publisherRepository;

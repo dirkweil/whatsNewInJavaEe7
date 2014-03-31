@@ -3,7 +3,7 @@ package de.gedoplan.demo.presentation;
 import javax.enterprise.inject.Model;
 
 @Model
-public class DemoModel
+public class DemoPresenter
 {
   private String email  = "dirk.weil@gedoplan.de";
   private int    nights = 1;

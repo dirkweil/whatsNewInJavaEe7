@@ -11,10 +11,10 @@ import javax.inject.Inject;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-public abstract class FlowModelBase
+public abstract class FlowPresenterBase
 {
   @Inject
-  private ActiveFlowsModel        activeBeansModel;
+  private ActiveFlowsPresenter        activeBeansModel;
 
   protected Log                   log               = LogFactory.getLog(this.getClass());
 

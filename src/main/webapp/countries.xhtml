@@ -5,7 +5,7 @@
 <ui:composition template="/templates/standard.xhtml">
   <ui:param name="title" value="JPA 2.1: Converter" />
   <ui:define name="content">
-    <h:dataTable value="#{countryModel.countries}" var="country" rules="all">
+    <h:dataTable value="#{countryPresenter.countries}" var="country" rules="all">
       <h:column>
         <f:facet name="header">ISO</f:facet>
         <h:outputText value="#{country.isoCode}" />
@@ -20,7 +20,7 @@
         <f:facet name="header">Continent<br/>(DB value)</f:facet>
         <h:outputText value="#{country.continent}" />
         <br/>
-        <h:outputText value="(#{countryModel.getDbValueForContinent(country)})" />
+        <h:outputText value="(#{countryPresenter.getDbValueForContinent(country)})" />
       </h:column>
 
       <h:column>
@@ -32,12 +32,12 @@
         <f:facet name="header">Expired?<br/>(DB value)</f:facet>
         <h:outputText value="#{country.expired}" />
         <br/>
-        <h:outputText value="(#{countryModel.getDbValueForExpired(country)})" />
+        <h:outputText value="(#{countryPresenter.getDbValueForExpired(country)})" />
       </h:column>
     </h:dataTable>
     
     <h:form>
-      <h:commandButton action="#{countryModel.createSomeCounties()}" value="create some countries" rendered="#{empty countryModel.countries}" />
+      <h:commandButton action="#{countryPresenter.createSomeCounties()}" value="create some countries" rendered="#{empty countryPresenter.countries}" />
     </h:form>
   </ui:define>
 </ui:composition>

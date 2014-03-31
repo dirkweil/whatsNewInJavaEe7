@@ -13,7 +13,7 @@ import javax.enterprise.inject.Model;
 import javax.inject.Inject;
 
 @Model
-public class CountryModel
+public class CountryPresenter
 {
   @Inject
   CountryRepository              countryRepository;

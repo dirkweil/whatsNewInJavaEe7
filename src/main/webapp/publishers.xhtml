@@ -5,7 +5,7 @@
 <ui:composition template="/templates/standard.xhtml">
   <ui:param name="title" value="JPA 2.1: Entity Graphs" />
   <ui:define name="content">
-    <h:dataTable value="#{publisherModel.publishers}" var="publisher" rules="all">
+    <h:dataTable value="#{publisherPresenter.publishers}" var="publisher" rules="all">
       <h:column>
         <f:facet name="header">Id</f:facet>
         <h:outputText value="#{publisher.id}" />
@@ -23,8 +23,8 @@
     </h:dataTable>
     
     <h:form>
-      <h:commandButton action="#{publisherModel.findAll()}" value="find (default)" />
-      <h:commandButton action="#{publisherModel.findAllWithBooks()}" value="find (fetch graph)" />
+      <h:commandButton action="#{publisherPresenter.findAll()}" value="find (default)" />
+      <h:commandButton action="#{publisherPresenter.findAllWithBooks()}" value="find (fetch graph)" />
     </h:form>
   </ui:define>
 </ui:composition>

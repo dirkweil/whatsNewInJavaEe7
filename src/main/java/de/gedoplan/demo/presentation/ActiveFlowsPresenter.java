@@ -8,14 +8,14 @@ import javax.enterprise.inject.Model;
 
 @Model
 @ApplicationScoped
-public class ActiveFlowsModel
+public class ActiveFlowsPresenter
 {
-  private List<FlowModelBase> flowModels = new CopyOnWriteArrayList<>();
+  private List<FlowPresenterBase> flowModels = new CopyOnWriteArrayList<>();
 
   public String getActiveBeans()
   {
     StringBuilder buf = new StringBuilder();
-    for (FlowModelBase flowModel : this.flowModels)
+    for (FlowPresenterBase flowModel : this.flowModels)
     {
       if (buf.length() != 0)
       {
@@ -26,12 +26,12 @@ public class ActiveFlowsModel
     return buf.toString();
   }
 
-  public void addActiveBean(FlowModelBase flowModel)
+  public void addActiveBean(FlowPresenterBase flowModel)
   {
     this.flowModels.add(flowModel);
   }
 
-  public void removeActiveBean(FlowModelBase flowModel)
+  public void removeActiveBean(FlowPresenterBase flowModel)
   {
     this.flowModels.remove(flowModel);
   }

@@ -10,7 +10,7 @@ import javax.inject.Named;
 
 @Named
 @FlowScoped("flowB2")
-public class FlowB2Model extends FlowModelBase
+public class FlowB2Presenter extends FlowPresenterBase
 {
   @Produces
   @FlowDefinition
