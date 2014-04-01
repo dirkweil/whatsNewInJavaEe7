@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+<ui:composition template="/templates/standard.xhtml">
+  <ui:param name="title" value="Websockets" />
+  <ui:define name="content">
+    <h:outputScript library="js" name="ticker.js" />
+
+    <h:form prependId="false">
+     <h:panelGrid columns="2">
+      <h:panelGroup/>
+      <h:panelGroup/>
+
+      <h:outputLabel for="coolNewFeature" value="Cool new feature: " />
+      <h:inputText id="coolNewFeature" value="" size="25" readonly="true" />
+     </h:panelGrid>
+    </h:form>
+  </ui:define>
+</ui:composition>
+</html>
