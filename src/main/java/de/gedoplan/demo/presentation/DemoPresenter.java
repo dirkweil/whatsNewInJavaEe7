@@ -2,11 +2,16 @@ package de.gedoplan.demo.presentation;
 
 import javax.enterprise.inject.Model;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 @Model
 public class DemoPresenter
 {
-  private String email  = "dirk.weil@gedoplan.de";
-  private int    nights = 1;
+  private static final Log log    = LogFactory.getLog(DemoPresenter.class);
+
+  private String           email  = "dirk.weil@gedoplan.de";
+  private int              nights = 1;
 
   public String getEmail()
   {
@@ -28,4 +33,9 @@ public class DemoPresenter
     this.nights = nights;
   }
 
+  public void doOk()
+  {
+    log.debug("email: " + this.email);
+    log.debug("nights: " + this.nights);
+  }
 }
