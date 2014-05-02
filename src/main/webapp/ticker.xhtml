@@ -5,7 +5,14 @@
 <ui:composition template="/templates/standard.xhtml">
   <ui:param name="title" value="Websockets" />
   <ui:define name="content">
-    <h:outputScript library="js" name="ticker.js" />
+    <h:outputScript>
+var appCtx = window.location.pathname.split('/')[1];
+var webSocket = new WebSocket('ws://' + window.location.host + '/' + appCtx + '/ticker');
+
+webSocket.onmessage = function(event) {
+  document.getElementById('coolNewFeature').value = event.data;
+};
+    </h:outputScript>
 
     <h:form prependId="false">
      <h:panelGrid columns="2">
