@@ -4,7 +4,7 @@
     <resource-library-contracts>
       <contract-mapping>
         <url-pattern>*</url-pattern>
-        <contracts>jughh</contracts>
+        <contracts>default</contracts>
       </contract-mapping>
     </resource-library-contracts>
   </application>
