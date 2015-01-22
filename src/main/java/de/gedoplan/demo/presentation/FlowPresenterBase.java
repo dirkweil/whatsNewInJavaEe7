@@ -1,5 +1,6 @@
 package de.gedoplan.demo.presentation;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,10 +12,10 @@ import javax.inject.Inject;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-public abstract class FlowPresenterBase
+public abstract class FlowPresenterBase implements Serializable
 {
   @Inject
-  private ActiveFlowsPresenter        activeBeansModel;
+  private ActiveFlowsPresenter    activeBeansModel;
 
   protected Log                   log               = LogFactory.getLog(this.getClass());
 
