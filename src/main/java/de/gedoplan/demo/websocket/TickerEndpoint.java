@@ -53,7 +53,6 @@ public class TickerEndpoint
   @Schedule(second = "*/2", minute = "*", hour = "*", persistent = false)
   public void tick(Timer timer)
   {
-
     for (Session session : sessions)
     {
       try
