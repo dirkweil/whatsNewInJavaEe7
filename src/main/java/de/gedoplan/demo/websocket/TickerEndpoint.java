@@ -53,11 +53,11 @@ public class TickerEndpoint
   @Schedule(second = "*/2", minute = "*", hour = "*", persistent = false)
   public void tick(Timer timer)
   {
+    String message = coolStuff[random.nextInt(coolStuff.length)];
     for (Session session : sessions)
     {
       try
       {
-        String message = coolStuff[random.nextInt(coolStuff.length)];
         LOG.debug("send \"" + message + "\" via session: " + session.getId());
         session.getBasicRemote().sendText(message);
       }
